@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        background-color: lightseagreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        height: 360px;
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: white;
+      }
+      img {
+        height: 200px;
+        width: 293px;
+        object-fit: cover;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      h1 {
+        text-transform: uppercase;
+        justify-content: center;
+        display: flex;
+        font-size: 2vw;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      h2 {
+        justify-content: center;
+        display: flex;
+        margin-top: 1vw;
+        color: red;
+      }
+      .btn {
+        background-color: rgb(69, 209, 186);
+        height: 50px;
+        width: 100px;
+        margin-left: 8vw;
+        margin-top: 1vw;
+        border-radius: 5px;
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="img/pho.jpg" alt="" />
+      <h1>Sandeep saw</h1>
+      <h2>Follow</h2>
+      <button class="btn">Add Feirnds</button>
+    </div>
+  </body>
+  <script>
+    let ht1 = document.querySelector("h1");
+    let ht = document.querySelector("h2");
+    let btn = document.querySelector(".btn");
+
+    let flag = 0;
+    btn.addEventListener("click", function () {
+      if (flag == 0) {
+        ht1.innerHTML = "SANDEEP SAW is your friend list"
+        ht1.style.fontSize = "15px"
+        ht.innerHTML = "Friends";
+        ht.style.color = "green";
+        btn.innerHTML = "Remove";
+        flag = 1;
+      } else {
+         ht1.innerHTML = "SANDEEP SAW"
+          ht1.style.fontSize = "2vw"
+        ht.innerHTML = "Follow";
+        ht.style.color = "Red";
+        btn.innerHTML = "Add Friends";
+        flag = 0;
+      }
+    });
+  </script>
+</html>
